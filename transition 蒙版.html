@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        width: 600px;
+        height: 338px;
+        /* 父相子绝 */
+        position: relative;
+        /* 不让子元素从父容器跑出去 */
+        overflow: hidden;
+        /* 让父元素在页面水平居中，如何垂直居中？？？ */
+        margin: 0 auto;
+      }
+      .mask {
+        width: 600px;
+        height: 338px;
+        background-color: black;
+        color: white;
+        font-size: 60px;
+
+        line-height: 338px;
+        text-align: center;
+        /* mask盖住图片 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        /* 给自己加transition */
+        transition: 1s linear all;
+
+        cursor: pointer;
+      }
+
+      img {
+        /* 给自己加transition */
+        transition: 1s linear;
+      }
+
+      .mask:hover {
+        opacity: 0.5;
+        transform: scale(1.6) rotate(20deg);
+      }
+
+      /* 如果直接hover img是hover不到的，被mask盖住了，所以hover outer */
+      .outer:hover img {
+        transform: scale(1.6) rotate(20deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <img src="./images/999278.jpeg" style="width: 600px" alt="" />
+      <div class="mask">你最优秀</div>
+    </div>
+  </body>
+</html>
