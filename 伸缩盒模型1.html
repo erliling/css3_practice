@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+      }
+      .outer {
+        width: 600px;
+        height: 600px;
+        background-color: #888;
+
+        display: flex;
+        /* 几乎不用，中间有缝，因为成了行内块 */
+        /* display: inline-flex; */
+        /* flex-direction: row-reverse; */
+      }
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        border: 1px solid black;
+        /* 表示width和height是最终的宽和高 */
+        box-sizing: border-box;
+      }
+      .inner3 {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <span class="inner">1</span>
+      <span class="inner">2</span>
+      <span class="inner inner3">
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+      </span>
+    </div>
+    <div class="outer">
+      <span class="inner">1</span>
+      <span class="inner">2</span>
+      <span class="inner inner3">
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+      </span>
+    </div>
+  </body>
+</html>
