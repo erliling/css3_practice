@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h1 {
+        width: 600px;
+        height: 400px;
+        line-height: 400px;
+        background-image: linear-gradient(30deg, red, yellow, green);
+        margin: 0 auto;
+        text-align: center;
+        font-size: 100px;
+        color: white;
+        text-shadow: 0 0 10px black;
+      }
+      @media print {
+        h1 {
+          background: transparent;
+        }
+      }
+      @media screen {
+        h1 {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        } */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        height: 200px;
+        background-color: gray;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+      @media (width: 800px) {
+        h1 {
+          background-color: green;
+        }
+      }
+
+      @media (max-width: 700px) {
+        h1 {
+          background-color: orange;
+        }
+      }
+      @media (min-width: 900px) {
+        h1 {
+          background-color: deepskyblue;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>新年快乐</h1>
+  </body>
+</html>
