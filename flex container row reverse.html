@@ -15,16 +15,16 @@
         background-color: #888;
 
         display: flex;
-        /* 几乎不用，中间有缝，因为成了行内块 */
+        /* almost never use, cz becomes inline block, it has gaps in between */
         /* display: inline-flex; */
-        /* flex-direction: row-reverse; */
+        flex-direction: row-reverse;
       }
       .inner {
         width: 200px;
         height: 200px;
         background-color: skyblue;
         border: 1px solid black;
-        /* 表示width和height是最终的宽和高 */
+        /* means the w&h are the final w&h including paddings borders... */
         box-sizing: border-box;
       }
       .inner3 {

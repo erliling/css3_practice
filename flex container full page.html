@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* 清style */
+      /* clear style */
       * {
         font-family: arial;
         font-size: 14px;
@@ -20,51 +20,54 @@
       ul {
         list-style: none;
       }
-      /* 让背景图充满body */
+
+      /* body fills with bg pic */
       html,
       body {
         width: 100%;
         height: 100%;
       }
       body {
-        background-image: url(./images/999278.jpeg);
+        background-image: url(./images/1.jpeg);
         background-repeat: no-repeat;
-        /* 当容器与背景图不匹配时的最优解，并可以随着浏览器resize变化 */
+        /* when the container and bg pic doesn't match, this can resize via browser */
         background-size: cover;
       }
+
+      /* display: flex */
       .page-header {
         height: 70px;
         background-color: rgba(0, 0, 0, 0.7);
-        /* 不用float方法的左右对齐方式 */
         display: flex;
+        /* the space between them are equal, different from space-around */
         justify-content: space-between;
-        /* 内部items垂直居中 */
+        /* all items align vertical center */
         align-items: center;
 
         padding: 0 20px;
       }
       .header-nav {
         display: flex;
+        /* justify-content: space-between; */
         /* align-items: flex-end; */
       }
       .header-nav li a {
         color: white;
         border: 1px solid white;
-        /* 圆角 */
         border-radius: 8px;
         padding: 10px;
         margin-right: 20px;
       }
-      /* 要选对child */
+      /* get rid of the last child's margin */
       .header-nav li:last-child a {
         margin-right: 0;
       }
-      /* 父元素没高度很麻烦 */
+
       .page-content {
         display: flex;
         /* justify-content: center;
         align-items: center; */
-        /* 灵活找到高度，100vh表示viewport的100% */
+        /* find the height of parent element, 100vh means 100% of viewport */
         height: calc(100vh - 70px);
       }
       .content-nav {
@@ -81,13 +84,13 @@
         width: 180px;
         height: 200px;
         background-color: orange;
-        /* 转换轴，让小图片和文字纵向排列 */
+        /* change axis, make pic and text align verticially */
         display: flex;
         flex-direction: column;
-        /* 调整侧轴对齐方式，别让他strench */
+        /* adjust secondary axis, and no strench  */
         align-items: center;
         justify-content: center;
-        /* 不能在这里修改span的font-size，因为*里面已经修改了 */
+        /* can't modify span's font-size, cz it is modified in * */
         /* font-size:20px */
 
         /* transition: all; */
@@ -124,11 +127,7 @@
   <body>
     <header class="page-header">
       <a href="#">
-        <img
-          src="./images/999278.jpeg"
-          style="height: 70px; width: 70px"
-          alt=""
-        />
+        <img src="./images/1.jpeg" style="height: 70px; width: 70px" alt="" />
       </a>
       <ul class="header-nav">
         <li><a href="#">国内校区</a></li>
@@ -141,7 +140,7 @@
       <div class="content-nav">
         <div class="item">
           <img
-            src="./images/999278.jpeg"
+            src="./images/1.jpeg"
             style="height: 100px; width: 100px"
             alt=""
           />
@@ -149,7 +148,7 @@
         </div>
         <div class="item">
           <img
-            src="./images/999278.jpeg"
+            src="./images/1.jpeg"
             style="height: 100px; width: 100px"
             alt=""
           />
@@ -157,7 +156,7 @@
         </div>
         <div class="item">
           <img
-            src="./images/999278.jpeg"
+            src="./images/1.jpeg"
             style="height: 100px; width: 100px"
             alt=""
           />
@@ -165,7 +164,7 @@
         </div>
         <div class="item">
           <img
-            src="./images/999278.jpeg"
+            src="./images/1.jpeg"
             style="height: 100px; width: 100px"
             alt=""
           />
@@ -173,7 +172,7 @@
         </div>
         <div class="item">
           <img
-            src="./images/999278.jpeg"
+            src="./images/1.jpeg"
             style="height: 100px; width: 100px"
             alt=""
           />

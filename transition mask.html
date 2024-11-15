@@ -9,11 +9,11 @@
       .outer {
         width: 600px;
         height: 338px;
-        /* 父相子绝 */
+        /* parent relative child absolute */
         position: relative;
-        /* 不让子元素从父容器跑出去 */
+        /* child doesn't exceed parent */
         overflow: hidden;
-        /* 让父元素在页面水平居中，如何垂直居中？？？ */
+        /* parent h align */
         margin: 0 auto;
       }
       .mask {
@@ -23,21 +23,23 @@
         color: white;
         font-size: 60px;
 
+        /* text center */
         line-height: 338px;
         text-align: center;
-        /* mask盖住图片 */
+
+        /* mask covers pic */
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0;
-        /* 给自己加transition */
+        /* add transition to make transform smooth */
         transition: 1s linear all;
 
         cursor: pointer;
       }
 
       img {
-        /* 给自己加transition */
+        /* add transition to make transform smooth */
         transition: 1s linear;
       }
 
@@ -46,7 +48,7 @@
         transform: scale(1.6) rotate(20deg);
       }
 
-      /* 如果直接hover img是hover不到的，被mask盖住了，所以hover outer */
+      /* img is covered by mask, so can't directly use hover, so need to hover outer */
       .outer:hover img {
         transform: scale(1.6) rotate(20deg);
       }
@@ -54,7 +56,7 @@
   </head>
   <body>
     <div class="outer">
-      <img src="./images/999278.jpeg" style="width: 600px" alt="" />
+      <img src="./images/1.jpeg" style="width: 600px" alt="" />
       <div class="mask">你最优秀</div>
     </div>
   </body>
